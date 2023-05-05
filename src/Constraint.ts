@@ -1,0 +1,1 @@
+export type Constraint = string;
