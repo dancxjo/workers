@@ -1,6 +1,5 @@
 import { config } from 'dotenv';
 import { Configuration, OpenAIApi } from 'openai';
-import { testThermostat } from './thermostat';
 
 config();
 const apiKey = process.env.OPENAI_API_KEY || '';
@@ -11,7 +10,6 @@ if (!apiKey) {
 const client = new OpenAIApi(new Configuration({ apiKey }));
 
 async function main() {
-    await testThermostat(client);
 }
 
 main().then(()=> {
